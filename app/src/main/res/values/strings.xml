@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+
+    <string name="currency">Currency</string>
+    <string name="i_have">I have</string>
+    <string name="i_want">I want</string>
+    <string name="select_currency">Select Currency</string>
+    <string name="enter_the_currency">Enter the currency</string>
+    <string name="exchange_rate">1 %1$s = %2$s %3$s</string>
+</resources>

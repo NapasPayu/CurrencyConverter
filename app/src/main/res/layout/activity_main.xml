@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_normal"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal">
+
+            <TextView
+                android:id="@+id/tv_i_have"
+                style="@style/TextStyle.Small"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/i_have" />
+
+            <TextView
+                android:id="@+id/tv_base_rate"
+                style="@style/TextStyle.Small"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/spacing_small"
+                tools:text="1 USD = 0.8900 EUR" />
+
+            <LinearLayout
+                android:id="@+id/ll_base_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_i_have"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_base_flag"
+                    android:layout_width="@dimen/flag_image"
+                    android:layout_height="@dimen/flag_image"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_base_code"
+                    style="@style/TextStyle.Large"
+                    android:drawableRight="@drawable/ic_more"
+                    android:gravity="center"
+                    android:text="@string/currency" />
+            </LinearLayout>
+
+            <com.napas.currencyconverter.ui.custom.AmountEditText
+                android:id="@+id/et_base_amount"
+                style="@style/AmountEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_base_rate"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_toRightOf="@+id/ll_base_currency"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginRight="@dimen/spacing_normal"
+        app:cardCornerRadius="@dimen/card_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_normal">
+
+            <TextView
+                android:id="@+id/tv_i_want"
+                style="@style/TextStyle.Small"
+                android:layout_marginBottom="@dimen/spacing_small"
+                android:text="@string/i_want" />
+
+            <TextView
+                android:id="@+id/tv_target_rate"
+                style="@style/TextStyle.Small"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/spacing_small"
+                tools:text="1 USD = 0.8900 EUR" />
+
+            <LinearLayout
+                android:id="@+id/ll_target_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_i_want"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_target_flag"
+                    android:layout_width="@dimen/flag_image"
+                    android:layout_height="@dimen/flag_image"
+                    android:layout_marginRight="@dimen/spacing_small"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_target_code"
+                    style="@style/TextStyle.Large"
+                    android:drawableRight="@drawable/ic_more"
+                    android:gravity="center"
+                    android:text="@string/currency" />
+            </LinearLayout>
+
+            <com.napas.currencyconverter.ui.custom.AmountEditText
+                android:id="@+id/et_target_amount"
+                style="@style/AmountEditTextStyle"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_target_rate"
+                android:layout_marginLeft="@dimen/spacing_normal"
+                android:layout_toRightOf="@+id/ll_target_currency"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
